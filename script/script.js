@@ -2,6 +2,7 @@
 let interviewList = [];
 let rejectList = [];
 
+let stat = 'all-cards';
 
 // button
 let totalCount = document.getElementById('total');
@@ -26,9 +27,11 @@ const interviewBtn = document.getElementById('interview-btn');
 const rejectBtn = document.getElementById('reject-btn');
 const filterSec = document.getElementById('filter-section');
 
+const noJob = document.getElementById('no-job');
 const btnSec = document.getElementById('btn-section');
 btnSec.addEventListener('click', function (event) {
-
+    stat = event.target.id;
+    // console.log(stat);
     if (event.target.id === 'btn-section') {
         return;
     }
@@ -43,6 +46,29 @@ btnSec.addEventListener('click', function (event) {
     {
         filterSec.classList.remove('hidden');
         allCard.classList.add('hidden');
+        if(interviewList.length === 0)
+        {
+            noJob.classList.remove('hidden');
+        }
+        else if(interviewList.length !== 0)
+        {
+            noJob.classList.add('hidden');
+        }
+        renderInterview();
+    }
+    else if(event.target === rejectBtn)
+    {
+        filterSec.classList.remove('hidden');
+        allCard.classList.add('hidden');
+        if(rejectList.length === 0)
+        {
+            noJob.classList.remove('hidden');
+        }
+        else if(rejectList.length !== 0)
+        {
+            noJob.classList.add('hidden');
+        }
+        renderReject();
     }
     else if(event.target === allBtn)
     {
@@ -76,12 +102,26 @@ mainContain.addEventListener('click', function (event) {
         }
         
         parNode.querySelector('.st').innerText ='INTERVIEW';
+        parNode.querySelector('.st').className = 'st border-green-500 text-green-500 border-2 font-semibold py-2 px-3 rounded-md inline-block mb-2';
         const cardExist = interviewList.find(item => item.company === cardInfo.company);
         if (!cardExist) {
             interviewList.push(cardInfo);
         }
+        rejectList = rejectList.filter(item => item.company != cardInfo.company);
+        if(stat === 'reject-btn')
+            {
+                renderReject();
+                if(rejectList.length === 0)
+                {
+                    noJob.classList.remove('hidden');
+                }
+                else if(rejectList.length !== 0)
+                {
+                    noJob.classList.add('hidden');
+                }
+        }
         calculate();
-        renderInterview();
+        
     }
     else if (event.target.classList.contains('reject-main')) {
         const parNode = event.target.parentNode.parentNode;
@@ -101,12 +141,27 @@ mainContain.addEventListener('click', function (event) {
         }
         
         parNode.querySelector('.st').innerText ='REJECT';
+        parNode.querySelector('.st').className = 'st border-red-500 text-red-500 border-2 font-semibold py-2 px-3 rounded-md inline-block mb-2';
         const cardExist = rejectList.find(item => item.company === cardInfo.company);
         if (!cardExist) {
             rejectList.push(cardInfo);
         }
+        interviewList = interviewList.filter(item => item.company != cardInfo.company);
+        if(stat === 'interview-btn')
+            {
+                renderInterview();
+                if(interviewList.length === 0)
+                {
+                    noJob.classList.remove('hidden');
+                }
+                else if(interviewList.length !== 0)
+                {
+                    noJob.classList.add('hidden');
+                }
+        }
         calculate();
-        renderReject();
+        
+        
     }
 })
 
@@ -120,13 +175,13 @@ function renderInterview() {
             <div class="space-y-5">
                     <div>
                         <h2 class="company font-semibold text-xl text-[#002C5C]">${card.company}</h2>
-                        <p class="skill text-gray-500">${card.skill}}</p>
+                        <p class="skill text-gray-500">${card.skill}</p>
                     </div>
                     <div>
                         <h2 class="payment text-gray-500">${card.payment}</h2>
                     </div>
                     <div>
-                        <h2 class="st mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">${card.st}</h2>
+                        <h2 class="st mb-2 border-green-500 text-green-500 border-2 font-semibold py-2 px-3 rounded-md inline-block ">${card.st}</h2>
                         <p class="describe">${card.describe}</p>
                     </div>
                     <div>
@@ -154,13 +209,13 @@ function renderReject() {
             <div class="space-y-5">
                     <div>
                         <h2 class="company font-semibold text-xl text-[#002C5C]">${card.company}</h2>
-                        <p class="skill text-gray-500">${card.skill}}</p>
+                        <p class="skill text-gray-500">${card.skill}</p>
                     </div>
                     <div>
                         <h2 class="payment text-gray-500">${card.payment}</h2>
                     </div>
                     <div>
-                        <h2 class="st mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">${card.st}</h2>
+                        <h2 class="st mb-2 border-red-500 text-red-500 border-2 font-semibold py-2 px-3 rounded-md inline-block ">${card.st}</h2>
                         <p class="describe">${card.describe}</p>
                     </div>
                     <div>

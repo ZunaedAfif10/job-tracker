@@ -29,7 +29,7 @@
     </style>
 </head>
 
-<body class="bg-[#eff1f3d7]">
+<body class="bg-[#eff1f3d7] min-h-screen">
     <header class="w-[90%] lg:w-[75%] mx-auto">
         <div class="pt-12 pb-7">
             <h1 class="font-bold text-3xl mb-5 text-[#002C5C]">Job Application Tracker</h1>
@@ -61,7 +61,7 @@
             <button id="reject-btn" class="btn px-8 text-gray-500 font-medium bg-white">Rejected</button>
         </div>
 
-        <section id="filter-section" class="hidden space-y-5"> 
+        <section id="filter-section" class="hidden space-y-5 pb-20"> 
 
         </section>
 
@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div>
-                    <button class="btn border-2 border-gray-100 px-[10px] rounded-full"><i
+                    <button id="delete" class="btn delete border-2 border-gray-100 px-[10px] rounded-full"><i
                             class="fa-regular fa-trash-can text-gray-400"></i></button>
                 </div>
             </div>
@@ -119,7 +119,7 @@
                     </div>
                 </div>
                 <div>
-                    <button class="btn border-2 border-gray-100 px-[10px] rounded-full"><i
+                    <button id="delete" class="btn delete border-2 border-gray-100 px-[10px] rounded-full"><i
                             class="fa-regular fa-trash-can text-gray-400"></i></button>
                 </div>
             </div>
@@ -151,7 +151,7 @@
                     </div>
                 </div>
                 <div>
-                    <button class="btn border-2 border-gray-100 px-[10px] rounded-full"><i
+                    <button id="delete" class="btn delete border-2 border-gray-100 px-[10px] rounded-full"><i
                             class="fa-regular fa-trash-can text-gray-400"></i></button>
                 </div>
             </div>
@@ -182,7 +182,7 @@
                     </div>
                 </div>
                 <div>
-                    <button class="btn border-2 border-gray-100 px-[10px] rounded-full"><i
+                    <button id="delete" class="btn delete border-2 border-gray-100 px-[10px] rounded-full"><i
                             class="fa-regular fa-trash-can text-gray-400"></i></button>
                 </div>
             </div>
@@ -213,7 +213,7 @@
                     </div>
                 </div>
                 <div>
-                    <button class="btn border-2 border-gray-100 px-[10px] rounded-full"><i
+                    <button id="delete" class="btn delete border-2 border-gray-100 px-[10px] rounded-full"><i
                             class="fa-regular fa-trash-can text-gray-400"></i></button>
                 </div>
             </div>
@@ -244,7 +244,7 @@
                     </div>
                 </div>
                 <div>
-                    <button class="btn border-2 border-gray-100 px-[10px] rounded-full"><i
+                    <button id="delete" class="btn delete border-2 border-gray-100 px-[10px] rounded-full"><i
                             class="fa-regular fa-trash-can text-gray-400"></i></button>
                 </div>
             </div>
@@ -275,7 +275,7 @@
                     </div>
                 </div>
                 <div>
-                    <button class="btn border-2 border-gray-100 px-[10px] rounded-full"><i
+                    <button id="delete" class="btn delete border-2 border-gray-100 px-[10px] rounded-full"><i
                             class="fa-regular fa-trash-can text-gray-400"></i></button>
                 </div>
             </div>
@@ -306,13 +306,13 @@
                     </div>
                 </div>
                 <div>
-                    <button class="btn border-2 border-gray-100 px-[10px] rounded-full"><i
+                    <button id="delete" class="btn delete border-2 border-gray-100 px-[10px] rounded-full"><i
                             class="fa-regular fa-trash-can text-gray-400"></i></button>
                 </div>
             </div>
         </section>
     </main>
-    <section class="w-[90%] lg:w-[75%] mx-auto bg-white py-28 hidden">
+    <section id="no-job" class="w-[90%] rounded-xl lg:w-[75%] mx-auto bg-white py-28 hidden -translate-y-20">
         <div>
             <img class="mx-auto block" src="jobs.png" alt="">
             <h2 class="font-semibold text-xl text-[#002C5C] mt-5 text-center text-xl">No jobs available</h2>
