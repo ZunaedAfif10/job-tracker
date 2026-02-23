@@ -80,7 +80,33 @@ mainContain.addEventListener('click', function (event) {
         if (!cardExist) {
             interviewList.push(cardInfo);
         }
+        calculate();
         renderInterview();
+    }
+    else if (event.target.classList.contains('reject-main')) {
+        const parNode = event.target.parentNode.parentNode;
+        
+        const company = parNode.querySelector('.company').innerText;
+        const skill = parNode.querySelector('.skill').innerText;
+        const payment = parNode.querySelector('.payment').innerText;
+        const st = parNode.querySelector('.st').innerText;
+        const describe = parNode.querySelector('.describe').innerText;
+        
+        const cardInfo = {
+            company,
+            skill,
+            payment,
+            st: 'REJECT',
+            describe
+        }
+        
+        parNode.querySelector('.st').innerText ='REJECT';
+        const cardExist = rejectList.find(item => item.company === cardInfo.company);
+        if (!cardExist) {
+            rejectList.push(cardInfo);
+        }
+        calculate();
+        renderReject();
     }
 })
 
@@ -88,6 +114,40 @@ function renderInterview() {
     filterSec.innerHTML = ""
 
     for (let card of interviewList) {
+        let div = document.createElement('div');
+        div.className = 'bg-white p-6 rounded-lg flex justify-between';
+        div.innerHTML = `
+            <div class="space-y-5">
+                    <div>
+                        <h2 class="company font-semibold text-xl text-[#002C5C]">${card.company}</h2>
+                        <p class="skill text-gray-500">${card.skill}}</p>
+                    </div>
+                    <div>
+                        <h2 class="payment text-gray-500">${card.payment}</h2>
+                    </div>
+                    <div>
+                        <h2 class="st mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">${card.st}</h2>
+                        <p class="describe">${card.describe}</p>
+                    </div>
+                    <div>
+                        <button
+                            class="interview-main btn bg-white font-semibold mr-2 rounded-md border-green-500 text-green-500 border-2 py-2 px-3">INTERVIEW</button>
+                        <button
+                            class="reject-main btn bg-white font-semibold rounded-md border-2 border-red-500 text-red-500 py-2 px-3">REJECTED</button>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn border-2 border-gray-100 px-[10px] rounded-full"><i
+                            class="fa-regular fa-trash-can text-gray-400"></i></button>
+                </div>
+        `
+        filterSec.appendChild(div);
+    }
+}
+function renderReject() {
+    filterSec.innerHTML = ""
+
+    for (let card of rejectList) {
         let div = document.createElement('div');
         div.className = 'bg-white p-6 rounded-lg flex justify-between';
         div.innerHTML = `
