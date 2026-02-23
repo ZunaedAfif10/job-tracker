@@ -33,18 +33,18 @@
     <header class="w-[90%] lg:w-[75%] mx-auto">
         <div class="pt-12 pb-7">
             <h1 class="font-bold text-3xl mb-5 text-[#002C5C]">Job Application Tracker</h1>
-            <div class="grid grid-rows-3 lg:grid-cols-3 gap-4">
+            <div class="grid grid-cols-3 gap-4">
                 <div class="p-5 bg-white rounded-lg">
                     <h2>Total</h2>
-                    <p class="font-bold text-3xl">8</p>
+                    <p id="total" class="font-bold text-3xl">8</p>
                 </div>
                 <div class="p-5 bg-white rounded-lg">
                     <h2>Interview</h2>
-                    <p class="font-bold text-3xl text-green-500">0</p>
+                    <p id="interview-count" class="font-bold text-3xl text-green-500">0</p>
                 </div>
                 <div class="p-5 bg-white rounded-lg">
                     <h2>Rejected</h2>
-                    <p class="font-bold text-3xl text-red-500">0</p>
+                    <p id="reject-count" class="font-bold text-3xl text-red-500">0</p>
                 </div>
             </div>
         </div>
@@ -61,26 +61,26 @@
             <button id="reject-btn" class="btn px-8 text-gray-500 font-medium bg-white">Rejected</button>
         </div>
 
-        <section class="space-y-4 pb-20">
+        <section id="all-cards" class="space-y-4 pb-20">
             <div class="bg-white p-6 rounded-lg flex justify-between">
                 <div class="space-y-5">
                     <div>
-                        <h2 class="font-semibold text-xl text-[#002C5C]">Mobile First Corp</h2>
-                        <p class="text-gray-500">React Native Developer</p>
+                        <h2 class="company font-semibold text-xl text-[#002C5C]">Mobile First Corp</h2>
+                        <p class="skill text-gray-500">React Native Developer</p>
                     </div>
                     <div>
-                        <h2 class="text-gray-500">Remote • Full-time • $130,000 - $175,000</h2>
+                        <h2 class="payment text-gray-500">Remote • Full-time • $130,000 - $175,000</h2>
                     </div>
                     <div>
-                        <h2 class="mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">NOT APPLIED</h2>
-                        <p>Build cross-platform mobile applications using React Native. Work on products used by
+                        <h2 class="st mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">NOT APPLIED</h2>
+                        <p class="describe">Build cross-platform mobile applications using React Native. Work on products used by
                             millions of users worldwide.</p>
                     </div>
                     <div>
                         <button
-                            class="btn bg-white font-semibold mr-2 rounded-md border-green-500 text-green-500 border-2 py-2 px-3">INTERVIEW</button>
+                            class="interview-main btn bg-white font-semibold mr-2 rounded-md border-green-500 text-green-500 border-2 py-2 px-3">INTERVIEW</button>
                         <button
-                            class="btn bg-white font-semibold rounded-md border-2 border-red-500 text-red-500 py-2 px-3">REJECTED</button>
+                            class="reject-main btn bg-white font-semibold rounded-md border-2 border-red-500 text-red-500 py-2 px-3">REJECTED</button>
                     </div>
                 </div>
                 <div>
@@ -92,26 +92,26 @@
             <div class="bg-white p-6 rounded-lg flex justify-between">
                 <div class="space-y-5">
                     <div>
-                        <h2 class="font-semibold text-xl text-[#002C5C]">WebFlow Agency</h2>
-                        <p class="text-gray-500">Web Designer & Developer</p>
+                        <h2 class="company font-semibold text-xl text-[#002C5C]">WebFlow Agency</h2>
+                        <p class="skill text-gray-500">Web Designer & Developer</p>
                     </div>
                     <div>
-                        <h2 class="text-gray-500">Los Angeles, CA
+                        <h2 class="payment text-gray-500">Los Angeles, CA
                             •
                             Part-time
                             •
                             $80,000 - $120,000</h2>
                     </div>
                     <div>
-                        <h2 class="mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">NOT APPLIED</h2>
-                        <p>Create stunning web experiences for high-profile clients. Must have portfolio and experience
+                        <h2 class="st mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">NOT APPLIED</h2>
+                        <p class="describe">Create stunning web experiences for high-profile clients. Must have portfolio and experience
                             with modern web design trends.</p>
                     </div>
                     <div>
                         <button
-                            class="btn bg-white font-semibold mr-2 rounded-md border-green-500 text-green-500 border-2 py-2 px-3">INTERVIEW</button>
+                            class="interview-main btn bg-white font-semibold mr-2 rounded-md border-green-500 text-green-500 border-2 py-2 px-3">INTERVIEW</button>
                         <button
-                            class="btn bg-white font-semibold rounded-md border-2 border-red-500 text-red-500 py-2 px-3">REJECTED</button>
+                            class="reject-main btn bg-white font-semibold rounded-md border-2 border-red-500 text-red-500 py-2 px-3">REJECTED</button>
                     </div>
                 </div>
                 <div>
@@ -123,27 +123,27 @@
             <div class="bg-white p-6 rounded-lg flex justify-between">
                 <div class="space-y-5">
                     <div>
-                        <h2 class="font-semibold text-xl text-[#002C5C]">DataViz Solutions</h2>
-                        <p class="text-gray-500">Data Visualization Specialist</p>
+                        <h2 class="company font-semibold text-xl text-[#002C5C]">DataViz Solutions</h2>
+                        <p class="skill text-gray-500">Data Visualization Specialist</p>
                     </div>
                     <div>
-                        <h2 class="text-gray-500">Boston, MA
+                        <h2 class="payment text-gray-500">Boston, MA
                             •
                             Full-time
                             •
                             $125,000 - $165,000</h2>
                     </div>
                     <div>
-                        <h2 class="mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">NOT APPLIED</h2>
-                        <p>Transform complex data into compelling visualizations. Required skills: D3.js, React, and
+                        <h2 class="st mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">NOT APPLIED</h2>
+                        <p class="describe">Transform complex data into compelling visualizations. Required skills: D3.js, React, and
                             strong analytical thinking.
                         </p>
                     </div>
                     <div>
                         <button
-                            class="btn bg-white font-semibold mr-2 rounded-md border-green-500 text-green-500 border-2 py-2 px-3">INTERVIEW</button>
+                            class="interview-main btn bg-white font-semibold mr-2 rounded-md border-green-500 text-green-500 border-2 py-2 px-3">INTERVIEW</button>
                         <button
-                            class="btn bg-white font-semibold rounded-md border-2 border-red-500 text-red-500 py-2 px-3">REJECTED</button>
+                            class="reject-main btn bg-white font-semibold rounded-md border-2 border-red-500 text-red-500 py-2 px-3">REJECTED</button>
                     </div>
                 </div>
                 <div>
@@ -155,26 +155,26 @@
             <div class="bg-white p-6 rounded-lg flex justify-between">
                 <div class="space-y-5">
                     <div>
-                        <h2 class="font-semibold text-xl text-[#002C5C]">CloudFirst Inc</h2>
-                        <p class="text-gray-500">Backend Developer</p>
+                        <h2 class="company font-semibold text-xl text-[#002C5C]">CloudFirst Inc</h2>
+                        <p class="skill text-gray-500">Backend Developer</p>
                     </div>
                     <div>
-                        <h2 class="text-gray-500">Seattle, WA
+                        <h2 class="payment text-gray-500">Seattle, WA
                             •
                             Full-time
                             •
                             $140,000 - $190,000</h2>
                     </div>
                     <div>
-                        <h2 class="mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">NOT APPLIED</h2>
-                        <p>Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps
+                        <h2 class="st mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">NOT APPLIED</h2>
+                        <p class="describe">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps
                             practices and cloud infrastructure.</p>
                     </div>
                     <div>
                         <button
-                            class="btn bg-white font-semibold mr-2 rounded-md border-green-500 text-green-500 border-2 py-2 px-3">INTERVIEW</button>
+                            class="interview-main btn bg-white font-semibold mr-2 rounded-md border-green-500 text-green-500 border-2 py-2 px-3">INTERVIEW</button>
                         <button
-                            class="btn bg-white font-semibold rounded-md border-2 border-red-500 text-red-500 py-2 px-3">REJECTED</button>
+                            class="reject-main btn bg-white font-semibold rounded-md border-2 border-red-500 text-red-500 py-2 px-3">REJECTED</button>
                     </div>
                 </div>
                 <div>
@@ -186,26 +186,26 @@
             <div class="bg-white p-6 rounded-lg flex justify-between">
                 <div class="space-y-5">
                     <div>
-                        <h2 class="font-semibold text-xl text-[#002C5C]">Innovation Labs</h2>
-                        <p class="text-gray-500">UI/UX Engineer</p>
+                        <h2 class="company font-semibold text-xl text-[#002C5C]">Innovation Labs</h2>
+                        <p class="skill text-gray-500">UI/UX Engineer</p>
                     </div>
                     <div>
-                        <h2 class="text-gray-500">Austin, TX
+                        <h2 class="payment text-gray-500">Austin, TX
                             •
                             Full-time
                             •
                             $110,000 - $150,000</h2>
                     </div>
                     <div>
-                        <h2 class="mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">NOT APPLIED</h2>
-                        <p>Create beautiful and functional user interfaces for our suite of products. Strong design
+                        <h2 class="st mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">NOT APPLIED</h2>
+                        <p class="describe">Create beautiful and functional user interfaces for our suite of products. Strong design
                             skills and frontend development expertise required.</p>
                     </div>
                     <div>
                         <button
-                            class="btn bg-white font-semibold mr-2 rounded-md border-green-500 text-green-500 border-2 py-2 px-3">INTERVIEW</button>
+                            class="interview-main btn bg-white font-semibold mr-2 rounded-md border-green-500 text-green-500 border-2 py-2 px-3">INTERVIEW</button>
                         <button
-                            class="btn bg-white font-semibold rounded-md border-2 border-red-500 text-red-500 py-2 px-3">REJECTED</button>
+                            class="reject-main btn bg-white font-semibold rounded-md border-2 border-red-500 text-red-500 py-2 px-3">REJECTED</button>
                     </div>
                 </div>
                 <div>
@@ -217,26 +217,26 @@
             <div class="bg-white p-6 rounded-lg flex justify-between">
                 <div class="space-y-5">
                     <div>
-                        <h2 class="font-semibold text-xl text-[#002C5C]">MegaCorp Solutions</h2>
-                        <p class="text-gray-500">JavaScript Developer</p>
+                        <h2 class="company font-semibold text-xl text-[#002C5C]">MegaCorp Solutions</h2>
+                        <p class="skill text-gray-500">JavaScript Developer</p>
                     </div>
                     <div>
-                        <h2 class="text-gray-500">New York, NY
+                        <h2 class="payment text-gray-500">New York, NY
                             •
                             Full-time
                             •
                             $130,000 - $170,00</h2>
                     </div>
                     <div>
-                        <h2 class="mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">NOT APPLIED</h2>
-                        <p>Build enterprise applications with JavaScript and modern frameworks. We offer competitive
+                        <h2 class="st mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">NOT APPLIED</h2>
+                        <p class="describe">Build enterprise applications with JavaScript and modern frameworks. We offer competitive
                             compensation, health insurance, and professional development opportunities.</p>
                     </div>
                     <div>
                         <button
-                            class="btn bg-white font-semibold mr-2 rounded-md border-green-500 text-green-500 border-2 py-2 px-3">INTERVIEW</button>
+                            class="interview-main btn bg-white font-semibold mr-2 rounded-md border-green-500 text-green-500 border-2 py-2 px-3">INTERVIEW</button>
                         <button
-                            class="btn bg-white font-semibold rounded-md border-2 border-red-500 text-red-500 py-2 px-3">REJECTED</button>
+                            class="reject-main btn bg-white font-semibold rounded-md border-2 border-red-500 text-red-500 py-2 px-3">REJECTED</button>
                     </div>
                 </div>
                 <div>
@@ -248,26 +248,26 @@
             <div class="bg-white p-6 rounded-lg flex justify-between">
                 <div class="space-y-5">
                     <div>
-                        <h2 class="font-semibold text-xl text-[#002C5C]">StartupXYZ</h2>
-                        <p class="text-gray-500">Full Stack Engineer</p>
+                        <h2 class="company font-semibold text-xl text-[#002C5C]">StartupXYZ</h2>
+                        <p class="skill text-gray-500">Full Stack Engineer</p>
                     </div>
                     <div>
-                        <h2 class="text-gray-500">Remote
+                        <h2 class="payment text-gray-500">Remote
                             •
                             Full-time
                             •
                             $120,000 - $160,000</h2>
                     </div>
                     <div>
-                        <h2 class="mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">NOT APPLIED</h2>
-                        <p>Join our fast-growing startup and work on our core platform. Experience with Node.js and
+                        <h2 class="st mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">NOT APPLIED</h2>
+                        <p class="describe">Join our fast-growing startup and work on our core platform. Experience with Node.js and
                             React required. Great benefits and equity package included.</p>
                     </div>
                     <div>
                         <button
-                            class="btn bg-white font-semibold mr-2 rounded-md border-green-500 text-green-500 border-2 py-2 px-3">INTERVIEW</button>
+                            class="interview-main btn bg-white font-semibold mr-2 rounded-md border-green-500 text-green-500 border-2 py-2 px-3">INTERVIEW</button>
                         <button
-                            class="btn bg-white font-semibold rounded-md border-2 border-red-500 text-red-500 py-2 px-3">REJECTED</button>
+                            class="reject-main btn bg-white font-semibold rounded-md border-2 border-red-500 text-red-500 py-2 px-3">REJECTED</button>
                     </div>
                 </div>
                 <div>
@@ -279,26 +279,26 @@
             <div class="bg-white p-6 rounded-lg flex justify-between">
                 <div class="space-y-5">
                     <div>
-                        <h2 class="font-semibold text-xl text-[#002C5C]">TechCorp Industries</h2>
-                        <p class="text-gray-500">Senior Frontend Developer</p>
+                        <h2 class="company font-semibold text-xl text-[#002C5C]">TechCorp Industries</h2>
+                        <p class="skill text-gray-500">Senior Frontend Developer</p>
                     </div>
                     <div>
-                        <h2 class="text-gray-500">San Francisco, CA
+                        <h2 class="payment text-gray-500">San Francisco, CA
                             •
                             Full-time
                             •
                             $130,000 - $175,000</h2>
                     </div>
                     <div>
-                        <h2 class="mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">NOT APPLIED</h2>
-                        <p>We are looking for an experienced Frontend Developer to build scalable web applications using
+                        <h2 class="st mb-2 bg-[#2e08ae1b] py-2 px-3 rounded-md inline-block ">NOT APPLIED</h2>
+                        <p class="describe">We are looking for an experienced Frontend Developer to build scalable web applications using
                             React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                     </div>
                     <div>
                         <button
-                            class="btn bg-white font-semibold mr-2 rounded-md border-green-500 text-green-500 border-2 py-2 px-3">INTERVIEW</button>
+                            class="interview-main btn bg-white font-semibold mr-2 rounded-md border-green-500 text-green-500 border-2 py-2 px-3">INTERVIEW</button>
                         <button
-                            class="btn bg-white font-semibold rounded-md border-2 border-red-500 text-red-500 py-2 px-3">REJECTED</button>
+                            class="reject-main btn bg-white font-semibold rounded-md border-2 border-red-500 text-red-500 py-2 px-3">REJECTED</button>
                     </div>
                 </div>
                 <div>
