@@ -1,3 +1,4 @@
+
 <!-- ================= HEADER ================= -->
 
 <h1 align="center">💼 Job Tracker</h1>
@@ -44,6 +45,12 @@ This project was built to solve that problem in a simple way by allowing users t
 It also serves as a strong practice project for mastering core JavaScript concepts without frameworks.
 
 ---
+<!-- ================= PREVIEW PLACEHOLDER ================= -->
+
+## 🖼️ Preview
+
+<img width="1919" height="909" alt="Screenshot 2026-03-24 230055" src="https://github.com/user-attachments/assets/c2f86440-43da-4f2b-90b7-c9ea960038c1" />
+
 
 ## 💡 Project Goals
 
