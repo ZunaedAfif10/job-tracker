@@ -50,6 +50,8 @@ It also serves as a strong practice project for mastering core JavaScript concep
 ## 🖼️ Preview
 
 <img width="1919" height="909" alt="Screenshot 2026-03-24 230055" src="https://github.com/user-attachments/assets/c2f86440-43da-4f2b-90b7-c9ea960038c1" />
+<img width="1919" height="910" alt="Screenshot 2026-03-24 230108" src="https://github.com/user-attachments/assets/ef434445-e037-4222-98f7-3a2568cc374b" />
+
 
 
 ## 💡 Project Goals
